@@ -6,6 +6,7 @@ const weekdayDropDown = document.getElementById("weekday")
 const animeList = document.getElementById("anime-list")
 const animeSchedule = document.getElementById("anime-schedule")
 const animeInLocalStorage = JSON.parse(localStorage.getItem("anime"))
+const errorMsg = document.getElementById("error-msg")
 
 if (animeInLocalStorage)
 {
@@ -38,12 +39,18 @@ enterBtn.addEventListener("click", function() {
     if (textField.value.trim() === "") {
         return;
     }
+    if (weekdayDropDown.value == "none")
+    {
+        errorMsg.innerHTML = "Please select a day of airing."
+        return;
+    }
     let newAnime = new animeProperties(textField.value, weekdayDropDown.value)
     anime.push(newAnime)
     printStuff(anime)
     localStorage.setItem("anime", JSON.stringify(anime))
     console.log(JSON.stringify(anime))
     textField.value = ""
+    errorMsg.innerHTML = ""
 
 })
 

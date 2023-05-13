@@ -28,6 +28,16 @@ input {
     font-style: italic;
 }
 
+#error-msg {
+    color: blue;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#none-msg {
+    font-style: italic;
+}
+
 ul {
     list-style: none;
     padding-left: 0px;
