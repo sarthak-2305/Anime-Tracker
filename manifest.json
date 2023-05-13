@@ -1,0 +1,10 @@
+{
+    "manifest-version": 3, 
+    "version": "1.0", 
+    "name": "Anime Tracker", 
+    "description": "Keeps track of the anime you're currently watching", 
+    "action": {
+        "default-popup": "index.html",
+        "default-icon": "icon.png"
+    }
+}

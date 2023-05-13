@@ -1,7 +1,8 @@
 body {
     background-color: lightblue;
     max-width: 500px;
-    font-family: sans-serif;}
+    font-family: sans-serif;
+}
 
 .heading {
     display: flex;
