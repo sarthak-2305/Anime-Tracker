@@ -5,6 +5,13 @@ const resetBtn = document.getElementById("reset")
 const weekdayDropDown = document.getElementById("weekday")
 const animeList = document.getElementById("anime-list")
 const animeSchedule = document.getElementById("anime-schedule")
+const animeInLocalStorage = JSON.parse(localStorage.getItem("anime"))
+
+if (animeInLocalStorage)
+{
+    anime = animeInLocalStorage
+    printStuff(anime)
+}
 
 //constructor for the object
 function animeProperties(animeName, schedule) {
@@ -31,14 +38,16 @@ enterBtn.addEventListener("click", function() {
     let newAnime = new animeProperties(textField.value, weekdayDropDown.value)
     anime.push(newAnime)
     printStuff(anime)
+    localStorage.setItem("anime", JSON.stringify(anime))
     console.log(JSON.stringify(anime))
     textField.value = ""
 
 })
 
 resetBtn.addEventListener("click", function() {
+    localStorage.clear()
     anime = []
-    printStuff("", "")
+    printStuff(anime)
     console.log(anime)
 })
 
