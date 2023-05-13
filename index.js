@@ -35,6 +35,9 @@ function printStuff(animeInfo) {
 }
 
 enterBtn.addEventListener("click", function() {
+    if (textField.value.trim() === "") {
+        return;
+    }
     let newAnime = new animeProperties(textField.value, weekdayDropDown.value)
     anime.push(newAnime)
     printStuff(anime)
@@ -44,7 +47,7 @@ enterBtn.addEventListener("click", function() {
 
 })
 
-resetBtn.addEventListener("click", function() {
+resetBtn.addEventListener("dblclick", function() {
     localStorage.clear()
     anime = []
     printStuff(anime)
