@@ -21,6 +21,7 @@ input {
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid red;
+    border-radius: 14px;
     margin-bottom: 4px;
 }
 
@@ -49,6 +50,8 @@ button, select {
     background: rgb(129, 245, 163);
     color: red;
     font-weight: bold;
+    border: 1px black solid;
+    border-radius: 14px;
     padding: 10px 40px;
     margin-top: 5px;
 }
