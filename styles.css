@@ -1,0 +1,43 @@
+body {
+    background-color: lightblue;
+    max-width: 500px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    font-size:40px;
+    color: green;
+    font-weight: bold;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid red;
+    margin-bottom: 4px;
+}
+
+button, select {
+    background: rgb(129, 245, 163);
+    color: red;
+    font-weight: bold;
+    padding: 10px 40px;
+    margin-top: 5px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.realList {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
